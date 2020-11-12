@@ -4,5 +4,3 @@
 # check file structure for more information.
 
 # -------------------------------------
-
-LOL python
