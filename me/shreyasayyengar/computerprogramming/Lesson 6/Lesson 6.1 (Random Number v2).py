@@ -9,7 +9,6 @@
 # You could also do this with a list, but its far less efficient
 # The loop basically just takes the answer, analyses it and throws a print, depending on the input.
 
-
 import random
 
 number = random.randint(1, 10)
@@ -17,8 +16,9 @@ number = random.randint(1, 10)
 player_name = input("Hello, What's your name?\n\n")
 number_of_guesses = 0
 
-tries = int(input("How many guesses do you want to have?\n\n"))
-print('Okay! ' + player_name + ' I am Guessing a number between 1 and 10: ')
+tries = int(input("Hello " + player_name + ". I am picking a number from 1 to 10. Your job is to try to guess it! How many guesses do you want to have?\n\n"))
+
+print(f'Ok! You will have ' + str(tries) + ' to guess the number! Good luck.')
 
 while number_of_guesses < tries:
     guess = int(input())

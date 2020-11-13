@@ -1,8 +1,4 @@
-# check if inputs can be casted to primitive types eg (int, string, double)
-
-
 # PSUEDO CODE
-
 # Using the modulus we can check if the REMAINDER == 0
 # if (getInput) % (constant we want to check) == 0
 # either return the leap year, in which we execute
@@ -23,6 +19,6 @@ if (inYear % 4) == 0: #checking
        else:
            print("{0} is not a leap year".format(inYear)) #output
    else:
-       print("{0} is a leap year".format(inYear))#output
+       print("{0} is a leap year".format(inYear)) #output
 else:
-   print("{0} is not a leap year".format(inYear))#output
+   print("{0} is not a leap year".format(inYear)) #output

@@ -10,4 +10,3 @@ for x in classmates:
     print(f'{x}')
 
 print("You have " + numberofclassmates + " people in your class")
-

@@ -3,7 +3,7 @@ prices = [50, 150, 200, 250, 120, 80]
 counter = 0
 
 while counter < len(foods):
-    print(f"{counter+1} {foods[counter]}: {prices[counter]}")
+    print(f"{counter + 1} {foods[counter]}: {prices[counter]}")
     counter += 1
 
 foodchoice = int(input("\n\nWhat would you like to eat today? Please either give the food choice. \n\n"))

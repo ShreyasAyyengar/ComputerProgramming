@@ -7,7 +7,6 @@
 # If the input is not equal to the c_answer, rerun the program with a denial with a print
 
 
-
 from random import *
 
 c_answer = randint(1, 2)
@@ -18,7 +17,6 @@ if answer == c_answer:
     print("Wow! Well done!")
 
 while answer != c_answer:
-
     print("Wrong! Try Again")
 
     answer = int(input("Please guess the number\n\n"))

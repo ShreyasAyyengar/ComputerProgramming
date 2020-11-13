@@ -1,6 +1,3 @@
-
-#
-#
 # Sudo Code!
 #
 # Defining the (input) as a string
@@ -10,7 +7,6 @@
 # If the answer is not stored in the ArrayList[], deny the answer with a print.
 # If the answer is in the list but is not the correct answer, deny with a print.
 # If the answer is correct, accept with a print, and close with exit code {0}
-
 
 
 birthdaymonth = input("Guess my birthday month (Capitalise the first letter)\n\n")
@@ -28,8 +24,6 @@ while birthdaymonth != "June":
         print("Incorrect! Please try again")
 
     birthdaymonth = input("Guess my birthday month (Capitalise the first letter)\n\n")
-
-    # birthdaymonth = input("Guess my birthday month (Capitalise the first letter)\n\n")
 
 if birthdaymonth == "June":
     print("Well Done! You have guessed my birthday month.")
