@@ -1,0 +1,1 @@
+This Python Project contains all of my sub projects created in computer programming in 9th grade! I will keep updating it as I go throught the year. Commits will be pushed every lesson for new code and pseudo code will also be included! This project is built on Python 3.9 in PyCharm Professional
