@@ -6,6 +6,10 @@ while counter < len(foods):
     print(f"{counter + 1} {foods[counter]}: {prices[counter]}")
     counter += 1
 
-foodchoice = int(input("\n\nWhat would you like to eat today? Please either give the food choice. \n\n"))
 
-print(f'You chose {foods[foodchoice - 1]}. It will amount to {prices[foodchoice - 1]} PHP')
+while 1 == 1:
+    foodchoice = int(input("\n\nWhat would you like to eat today? Please either give the food choice. \n\n"))
+    print(f'You chose {foods[foodchoice - 1]}. It will amount to {prices[foodchoice - 1]} PHP')
+
+done = len()
+print(f'{done} ----- Choose this number to complete your order!')
