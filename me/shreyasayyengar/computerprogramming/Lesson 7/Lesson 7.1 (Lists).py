@@ -1,45 +1,28 @@
-foods = ["Apple Slices", "Pizza", "Pasta", "Steak", "Bread", "Chocolate Bar"]
-prices = [50, 150, 200, 250, 120, 80]
-healthy = ["Healthy", "UnHealthy", "Healthy", "Healthy", "Healthy", "UnHealthy"]
-counter = 0
+toppings = ['plain cheese', 'peperoni', 'olive', 'mushrooms', 'garlic'] #Lists(str)
+price = [10, 5, 4, 8, 2]  # List (Int)
+counter = 0 # Lists(Int)
 
-while counter < len(foods):
-    print(f'{counter + 1} {foods[counter]} {prices[counter]}')
+done = len(toppings) + 1
+print(f'{done} ----- Choose this number to finish your order.')
+
+while counter < len(toppings):
+    print(f'{counter + 1} {toppings[counter]} {price[counter]}')
     counter += 1
 
-done = len(foods) + 1
-print(f'{done}  ----- Choose this number to finish your order.')
-
-orders = [0] * len(foods)
-choice = int(input('What food item would you like?\n\n'))
-print(f'{done}  ----- Choose this number to finish your order.')
-
-orders = [0] * len(foods)
-choice = int(input('What food item would you like?\n\n'))
-
+orders = [0] * len(toppings)
+choice = int(input('what topping would you like on your pizza?'))
 while choice != done:
-    while choice <= 0 or choice > len(foods) + 1:
-        print("Sorry, you have not entered a valid number. Please only choose valid food items. ")
-        choice = int(input('What food item would you like?\n\n'))
-
+    while choice <= 0 or choice > 7:
+        print('That was not an option. Please enter a number from the list.')
+        choice = int(input('what topping would you like on your pizza? Cheese costs '))
     orders[choice - 1] += 1
-    choice = int(input('What additional food item would you like?\n\n'))
+    choice = int(input('Would you like an aditional pizza topping?'))
 
 total = 0
-healthpoints = 0
-for x, y, z, h in zip(foods, orders, prices, healthy):
+for x, y, z in zip(toppings, orders, price):
     total += y * z
+    grand_total = y * z
     if y > 0:
-        print(f'Excellent choice. You chose {y} x {x}.')
-    if h == 'Healthy':
-        healthpoints += y
-    else:
-        healthpoints -= y
+        print(f'You chose {y} x {x} as a topping.')
 
-if healthpoints < 0:
-    print(f'You must reorder. You need to have more health points! Your healthpoints is {healthpoints}')
-    choice = int(input('What food item would you like?\n\n'))
-
-else:
-    print(f'Good job! You ate healthy')
-print(f' Your grand total is {total}. Bon appetit!')
+print(f'And you total price is {total}')
