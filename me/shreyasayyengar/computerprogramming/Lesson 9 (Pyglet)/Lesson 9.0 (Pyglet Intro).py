@@ -1,11 +1,5 @@
 from pyglet import *
-from pyglet import app
-from pyglet import resource
-from pyglet import sprite
-from pyglet import clock
-from pyglet.window import key
-
-from pyglet.window import Window
+from pyglet.window import *
 
 window = Window(1000, 1000)
 
@@ -45,7 +39,7 @@ player_img = resource.image("player.png")
 
 player_sprite = sprite.Sprite(img=player_img, x=500, y=500)
 
-plyr_speed = 100
+plyr_speed = 500
 plyr_dx = 0
 plyr_dy = 0
 
