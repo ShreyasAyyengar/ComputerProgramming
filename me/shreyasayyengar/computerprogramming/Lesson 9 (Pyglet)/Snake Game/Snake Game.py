@@ -55,13 +55,14 @@ sprites = {}
 for (row, name) in enumerate(rows):
     sprites[name] = [
         spritesheet.get_region(
-            x = 16 * col,
-            y = 592 - (16 * row) - 16,
-            width = 16,
-            height = 16
+            x=16 * col,
+            y=592 - (16 * row) - 16,
+            width=16,
+            height=16
         )
         for col in range(16)
     ]
+
 
 class Arena:
     def __init__(self):
@@ -75,7 +76,7 @@ class Arena:
         opposites = {'D': 'U', 'U': 'D', 'L': 'R', 'R': 'L'}
         (x, y, head_direction) = self.snake[-1]
         if opposites[head_direction] == direction:
-            pass # Deny, perhaps with a visual indicator or a sound effect
+            pass  # Deny, perhaps with a visual indicator or a sound effect
         else:
             self.direction = direction
 
@@ -138,10 +139,10 @@ class Arena:
 
         # Draw apple
         (x, y) = self.apple
-        s.append(pyglet.sprite.Sprite(sprites['APPLE'][frame], x = x * 16, y = y * 16, batch = batch))
+        s.append(pyglet.sprite.Sprite(sprites['APPLE'][frame], x=x * 16, y=y * 16, batch=batch))
 
         # Draw snake
-        for (i, (x, y, direction)) in enumerate(self.snake): # TODO: Batch
+        for (i, (x, y, direction)) in enumerate(self.snake):  # TODO: Batch
             part = 'BODY'
             if i == 0:
                 part = 'TAIL'
@@ -157,11 +158,13 @@ class Arena:
                     img = sprites[name][0]
                 else:
                     img = sprites[name][frame]
-                s.append(pyglet.sprite.Sprite(img, x = x * 16, y = y * 16, batch = batch))
+                s.append(pyglet.sprite.Sprite(img, x=x * 16, y=y * 16, batch=batch))
 
         batch.draw()
 
+
 arena = Arena()
+
 
 @window.event
 def on_key_press(symbol, modifiers):
@@ -172,14 +175,17 @@ def on_key_press(symbol, modifiers):
         arena.new_snake()
         arena.new_apple()
 
+
 @window.event
 def on_draw():
     window.clear()
     arena.draw()
 
+
 def main():
     pyglet.clock.schedule_interval(arena.update, 1.0 / 32)
     pyglet.app.run()
+
 
 if __name__ == '__main__':
     main()

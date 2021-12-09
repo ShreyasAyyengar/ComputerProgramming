@@ -35,7 +35,7 @@ def on_key_press(symbol, modifiers):
 resource.path = ['resources']
 resource.reindex()
 
-player_img = resource.image("player.png")
+player_img = resource.image('player.png')
 
 player_sprite = sprite.Sprite(img=player_img, x=500, y=500)
 
